@@ -1,0 +1,242 @@
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@500;600&family=Playfair+Display:wght@700;500&display=swap');
+
+
+/*#region Default View*/
+html, body {
+        margin: 0;
+        padding: 0;
+        font-family: 'Open Sans', sans-serif;
+        background:#fff;
+        color:#000;
+        line-height:1.6;
+    }
+
+
+/*#region Hero*/
+
+.hero-image {
+    background-image: linear-gradient(to right, rgba(245, 246, 252, 0), rgba(117, 19, 93, 0.8)60%),
+    url('../images/reina.jpg');
+    height: 500px;
+    background-position: center;
+    background-size: cover;
+    position: relative;    
+    animation-name: hero-image;
+    animation-duration:3s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes hero-image {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+.hero-header {
+    height: 150px;
+
+}
+
+.hero-header h1 {
+    font-size: 50px;
+    line-height: 1.3;
+    position:absolute;
+    text-align: right;
+    top: 50%;
+    left: 53%;
+    transform: translate(10%, -30%);
+    color: white;
+    animation: heading;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+
+}
+
+@keyframes heading {
+    0% {top: -100px;}
+    100% {top: 100px;}
+
+}
+
+.content {
+    position:absolute;
+    margin:4rem;
+    text-align: justify;
+    top: 50%;
+    left: 60%;
+    transform: translate(-20%, -90%);
+    color: white;
+    animation-name:content;
+    animation-duration:3s;
+    animation-fill-mode: forwards;
+
+
+}
+
+@keyframes content {
+    0% {left: -1000px}
+    100% {left: 0}
+
+}
+
+.btn {
+    display: inline-block;
+    color:#fff;
+    text-decoration:none;
+    text-align: center;
+    padding: 1rem 2rem;
+    border: #fff 1px solid;
+    margin-top: 40px;
+    opacity:1;
+    position:absolute;
+    text-align: right;
+    top: 70%;
+    left: 81%;
+    transform: translate(-50%, -50%);
+    animation-name: btn;
+    animation-duration: 3s;
+    animation-delay: 3s;
+    animation-fill-mode: forwards;
+    cursor: pointer;
+
+    transition-property: transform;
+    transition-duration: 1s;
+
+}
+
+.btn:hover {
+    background-color: #ca0668;
+    color: #fff; 
+    box-shadow: rgba(117, 19, 93,.8) 3px 3px 3px 3px;
+  }
+
+
+@keyframes content {
+    0% {opacity:0}
+    100% {opacity:1}
+}
+
+/*#endregion*/
+
+/*#region Navigation */
+
+nav {
+  text-align: center;
+  margin: 0;
+}
+  
+    ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: grid;
+        grid-auto-flow: column;
+        justify-content: space-around;
+        background: #d5d5d5;
+        border-radius: 5px;
+    }
+    
+    li {
+        float: left;
+        width: 150px;
+        height: 65px;
+        line-height: 65px;
+        position: relative;
+        text-transform: uppercase;
+        font-size: 14px;
+        color: #d5d5d5;
+        cursor: pointer;
+    }
+
+    li:hover {
+        background: #d5d5d5;
+        border-radius: 5px;
+    }
+        
+
+ul.drop-menu {
+    position: absolute;
+    top: 100%;
+    left: 0%;
+    width: 100%;
+    padding: 0;
+    display: grid;
+    grid-auto-flow: row;
+    animation-fill-mode: forwards;
+
+}
+  
+    li {
+        background: #d5d5d5;
+        color: #000;
+        font-family: lato,sans-serif;
+    }
+    
+    li:hover{
+        background: #ca0668;
+        color: #fff;
+        animation-fill-mode: forwards;
+
+    }
+
+    li:last-child { 
+        border-radius: 0px 0px 5px 5px
+    }
+
+/***** Default Trigger*****/ 
+
+/*HIDE*/
+ul.drop-menu li {
+    display: none;
+}
+
+/*SHOW*/
+li:hover ul.drop-menu li {
+  display: block;
+}
+
+
+/***** MENU 1 *****/
+
+li:hover ul.drop-menu.menu-1 {
+    perspective: 1000px;
+}
+
+li:hover ul.drop-menu.menu-1 li {
+    opacity: 0;
+    animation-name: menu1;
+    animation-duration: 300ms;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+}
+
+
+@keyframes menu1 {
+    0% {
+        opacity:0; 
+        transform:rotateY(-90deg), translateY(30px);
+    };
+    100% {
+        opacity:1; 
+        transform:rotateY(0deg), translateY(0px);
+    };
+}
+
+/*#endregion*/
+
+
+
+/*#endregion*/
+
+
+@media only screen and (min-width : 700px) {
+
+
+
+
+    }
+
+
+@media only screen and (min-width : 1000px) {
+ 
+}
