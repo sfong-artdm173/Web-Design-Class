@@ -219,10 +219,216 @@ nav {
 
 @media only screen and (min-width : 700px) {
 
+/*#region Hero*/
+
+.hero-image {
+    background-image: linear-gradient(to right, rgba(245, 246, 252, 0), rgba(117, 19, 93, 0.8)60%),
+    url('../images/reina.jpg');
+    height: 500px;
+    background-position: left;
+    background-size: cover;
+    position: relative;    
+    animation-name: hero-image;
+    animation-duration:3s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes hero-image {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+.hero-header {
+    height: 150px;
+
+}
+
+.hero-header h1 {
+    font-size: 2.5rem;
+    line-height: 1.3;
+    position:relative;
+    text-align: right;
+    top: 0%;
+    right: 5%;
+    transform: translate(0%, 0%);
+    color: white;
+    animation: heading;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+
+}
+
+@keyframes heading {
+    0% {top: -100px;}
+    100% {top: 50px;}
+
+}
+
+.content {
+    font-size: 1.1rem;
+    margin:2rem;
+    padding-top:1rem;
+    padding-bottom:1rem;
+    text-align: justify;
+    line-height: 1.7;
+    top: 18%;
+    right: 3%;
+    transform: translate(0%, 0%);
+    color: white;
+    animation-name:content;
+    animation-duration:2s;
+    animation-fill-mode: forwards;
 
 
+}
+
+@keyframes content {
+    0% {left: -1000px;}
+    100% {left: 42%;}
+
+}
+
+.btn {
+    display: inline-block;
+    color:#fff;
+    text-decoration:none;
+    text-align: right;
+    margin-top: 1rem;
+    padding: 1rem 8rem;
+    border: #fff 1px solid;
+    opacity:1;
+    text-align: right;
+    top: 70%;
+    right: 5%;
+    transform: translate(0%, 0%);
+    animation: btn 5s ease-in forwards;
+    cursor: pointer;
+
+}
+
+.btn:hover {
+    background-color: #ca0668;
+    color: #fff; 
+    box-shadow: rgba(117, 19, 93,.8) 3px 3px 3px 3px;
+  }
+
+
+@keyframes btn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+}
+
+/*#endregion*/
+
+/*#region Navigation */
+
+nav {
+  text-align: center;
+  margin: 0;
+}
+  
+    ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: grid;
+        grid-auto-flow: column;
+        justify-content: space-around;
+        background: #d5d5d5;
+        border-radius: 5px;
+    }
+    
+    li {
+        float: left;
+        width: 150px;
+        height: 65px;
+        line-height: 65px;
+        position: relative;
+        text-transform: uppercase;
+        font-size: 14px;
+        color: #d5d5d5;
+        cursor: pointer;
+    }
+
+    li:hover {
+        background: #d5d5d5;
+        border-radius: 5px;
+    }
+        
+
+ul.drop-menu {
+    position: absolute;
+    top: 100%;
+    left: 0%;
+    width: 100%;
+    padding: 0;
+    display: grid;
+    grid-auto-flow: row;
+    animation-fill-mode: forwards;
+
+}
+  
+    li {
+        background: #d5d5d5;
+        color: #000;
+        font-family: lato,sans-serif;
+    }
+    
+    li:hover{
+        background: #ca0668;
+        color: #fff;
+        animation-fill-mode: forwards;
 
     }
+
+    li:last-child { 
+        border-radius: 0px 0px 5px 5px
+    }
+
+/***** Default Trigger*****/ 
+
+/*HIDE*/
+ul.drop-menu li {
+    display: none;
+}
+
+/*SHOW*/
+li:hover ul.drop-menu li {
+  display: block;
+}
+
+
+/***** MENU 1 *****/
+
+li:hover ul.drop-menu.menu {
+    perspective: 1000px;
+}
+
+li:hover ul.drop-menu.menu li {
+    opacity: 0;
+    animation-name: menu1;
+    animation-duration: 300ms;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+}
+
+
+@keyframes menu {
+    0% {
+        opacity:0; 
+        transform:rotateY(-90deg), translateY(30px);
+    };
+    100% {
+        opacity:1; 
+        transform:rotateY(0deg), translateY(0px);
+    };
+}
+
+/*#endregion*/
+
+
+}
+
 
 
 @media only screen and (min-width : 1000px) {
@@ -247,19 +453,16 @@ nav {
     100% {opacity: 1;}
 }
 
-.hero-header {
-    height: 150px;
-
-}
 
 .hero-header h1 {
-    font-size: 50px;
+    font-size: 4rem;
     line-height: 1.3;
+    margin:4rem;
     position:absolute;
     text-align: right;
-    top: 50%;
-    left: 53%;
-    transform: translate(10%, -30%);
+    top: -20%;
+    right: 0%;
+    transform: translate(0%, -50%);
     color: white;
     animation: heading;
     animation-duration: 3s;
@@ -269,21 +472,20 @@ nav {
 
 @keyframes heading {
     0% {top: -100px;}
-    100% {top: 100px;}
+    100% {top: 50px;}
 
 }
 
 .content {
-    position:absolute;
-    margin:4rem;
+    margin:5rem 4rem 4rem 4rem;
+    line-height: 1.8;
     text-align: justify;
-    top: 50%;
-    left: 60%;
-    transform: translate(-20%, -90%);
+    top: 15%;
+    left: 35%;
+    right: 0%;
+    transform: translate(0%, 0%);
     color: white;
-    animation-name:content;
-    animation-duration:3s;
-    animation-fill-mode: forwards;
+    animation: content 3s ease-in;
 
 
 }
@@ -295,23 +497,19 @@ nav {
 }
 
 .btn {
-    display: inline-block;
+    display: block;
     color:#fff;
+    margin:4rem;
     text-decoration:none;
     text-align: center;
-    padding: 1rem 2rem;
+    padding: 1rem 5rem;
     border: #fff 1px solid;
-    margin-top: 40px;
-    opacity:1;
-    position:absolute;
-    text-align: right;
-    top: 70%;
-    left: 81%;
-    transform: translate(-50%, -50%);
-    animation-name: btn;
-    animation-duration: 3s;
-    animation-delay: 3s;
-    animation-fill-mode: forwards;
+    opacity:0;
+    top: 55%;
+    left: 35%;
+    right: 0%;
+    transform: translate(0%, 0%);
+    animation: btn 3s ease-in forwards;
     cursor: pointer;
 
     transition-property: transform;
@@ -326,9 +524,9 @@ nav {
   }
 
 
-@keyframes content {
-    0% {opacity:0}
-    100% {opacity:1}
+@keyframes btn {
+    0% {opacity:0;}
+    100% {opacity:1;}
 }
 
 /*#endregion*/
