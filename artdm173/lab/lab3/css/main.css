@@ -3,7 +3,7 @@
 
 
 /*#region Default View*/
-html, body {
+html, main, body {
         margin: 0;
         padding: 0;
         font-family: 'Open Sans', sans-serif;
@@ -46,6 +46,7 @@ nav {
       li:hover {
           background: #d5d5d5;
           border-radius: 5px;
+          z-index: 5;
       }
           
   
@@ -72,9 +73,7 @@ nav {
   
       }
   
-      li:last-child { 
-          border-radius: 0px 0px 5px 5px
-      }
+
   
   /***** Default Trigger*****/ 
   
@@ -92,26 +91,36 @@ nav {
   
   /***** MENU *****/
   
-  li:hover ul.drop-menu.menu {
-      opacity: 1;
-      animation: menu 300ms ease-in forwards;
-  }
 
+  li:hover > ul.drop-menu.menu {
+    perspective: 1000px;
+
+}
+
+li:hover ul.drop-menu.menu li {
+    opacity: 0;
+    animation: menu 300ms ease-in-out forwards;
+
+}
+
+
+@keyframes menu {
+    0% {
+        opacity: 0;
+        transform: rotateY(-90deg), translateY(30px);
+    };
+    100% {
+        opacity: 1;
+        transform: rotateY(0deg), translateY(0px);
+
+    };
+}
   
-  
-  @keyframes menu {
-      0% {
-          opacity:0; 
-          transform:rotateY(-90deg), translateY(30px);
-      };
-      100% {
-          opacity:1; 
-          transform:rotateY(0deg), translateY(0px);
-      };
-  }
   
   /*#endregion*/
-      
+  
+  
+
 
 /*#region Hero*/
 
@@ -120,9 +129,9 @@ nav {
     url('../images/reina.jpg');
     height: 800px;
     width: 100%;
+    transform: translate(0%, -2%);
     background-position:left;
     background-size: cover;
-    position: relative;    
     animation-name: hero-image;
     animation-duration:3s;
     animation-fill-mode: forwards;
@@ -136,12 +145,12 @@ nav {
 
 
 .hero-header h1 {
-    font-size: 2.7rem;
+    font-size: 2.5rem;
     text-shadow: #000 1px 2px;
     line-height: 1.3;
-    position:relative;
-    text-align: justify;
+    text-align: left;
     margin:1rem;
+    padding-bottom:2rem;
     transform: translate(0%, 30%);
     color: white;
     animation: heading;
@@ -160,7 +169,6 @@ nav {
     font-size: 1rem;
     line-height: 1.5;
     text-shadow: #000 1px 2px;
-    position:absolute;
     margin:1rem;
     text-align:justify;
     top: 10%;
@@ -187,7 +195,6 @@ nav {
     margin: 1rem;
     border: #fff 1px groove;
     opacity:0;
-    position:absolute;
     text-align: right;
     top: 25%;
 
@@ -227,6 +234,7 @@ nav {
     height: 500px;
     background-position: left;
     background-size: cover;
+    transform: translate(0%, -3.5%);
     position: relative;    
     animation-name: hero-image;
     animation-duration:3s;
@@ -244,12 +252,12 @@ nav {
 }
 
 .hero-header h1 {
-    font-size: 2.5rem;
+    font-size: 2.6em;
     line-height: 1.3;
     position:relative;
     text-align: right;
     top: 0%;
-    right: 5%;
+    right: 0%;
     transform: translate(0%, 0%);
     color: white;
     animation: heading;
@@ -260,19 +268,20 @@ nav {
 
 @keyframes heading {
     0% {top: -100px;}
-    100% {top: 50px;}
+    100% {top: 70px;}
 
 }
 
 .content {
     font-size: 1.1rem;
     margin:2rem;
-    padding-top:1rem;
     padding-bottom:1rem;
     text-align: justify;
-    line-height: 1.7;
-    top: 18%;
-    right: 3%;
+    position: absolute;
+    line-height: 1.8;
+    top: 25%;
+    left: 50%;
+    right: -1%;
     transform: translate(0%, 0%);
     color: white;
     animation-name:content;
@@ -294,12 +303,13 @@ nav {
     text-decoration:none;
     text-align: right;
     margin-top: 1rem;
-    padding: 1rem 8rem;
+    padding: 1rem 8.5rem;
     border: #fff 1px solid;
     opacity:1;
     text-align: right;
-    top: 70%;
-    right: 5%;
+    position: absolute;
+    top: 76%;
+    right: 1%;
     transform: translate(0%, 0%);
     animation: btn 5s ease-in forwards;
     cursor: pointer;
@@ -319,117 +329,7 @@ nav {
 }
 
 /*#endregion*/
-
-/*#region Navigation */
-
-nav {
-  text-align: center;
-  margin: 0;
 }
-  
-    ul {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-        display: grid;
-        grid-auto-flow: column;
-        justify-content: space-around;
-        background: #d5d5d5;
-        border-radius: 5px;
-    }
-    
-    li {
-        float: left;
-        width: 150px;
-        height: 65px;
-        line-height: 65px;
-        position: relative;
-        text-transform: uppercase;
-        font-size: 14px;
-        color: #d5d5d5;
-        cursor: pointer;
-    }
-
-    li:hover {
-        background: #d5d5d5;
-        border-radius: 5px;
-    }
-        
-
-ul.drop-menu {
-    position: absolute;
-    top: 100%;
-    left: 0%;
-    width: 100%;
-    padding: 0;
-    display: grid;
-    grid-auto-flow: row;
-    animation-fill-mode: forwards;
-
-}
-  
-    li {
-        background: #d5d5d5;
-        color: #000;
-        font-family: lato,sans-serif;
-    }
-    
-    li:hover{
-        background: #ca0668;
-        color: #fff;
-        animation-fill-mode: forwards;
-
-    }
-
-    li:last-child { 
-        border-radius: 0px 0px 5px 5px
-    }
-
-/***** Default Trigger*****/ 
-
-/*HIDE*/
-ul.drop-menu li {
-    display: none;
-}
-
-/*SHOW*/
-li:hover ul.drop-menu li {
-  display: block;
-}
-
-
-/***** MENU 1 *****/
-
-li:hover ul.drop-menu.menu {
-    perspective: 1000px;
-}
-
-li:hover ul.drop-menu.menu li {
-    opacity: 0;
-    animation-name: menu1;
-    animation-duration: 300ms;
-    animation-timing-function: ease-in-out;
-    animation-fill-mode: forwards;
-}
-
-
-@keyframes menu {
-    0% {
-        opacity:0; 
-        transform:rotateY(-90deg), translateY(30px);
-    };
-    100% {
-        opacity:1; 
-        transform:rotateY(0deg), translateY(0px);
-    };
-}
-
-/*#endregion*/
-
-
-}
-
-
 
 @media only screen and (min-width : 1000px) {
  
@@ -441,6 +341,7 @@ li:hover ul.drop-menu.menu li {
     url('../images/reina.jpg');
     height: 500px;
     background-position: center;
+    transform: translate(0%, 0%);
     background-size: cover;
     position: relative;    
     animation-name: hero-image;
@@ -455,9 +356,9 @@ li:hover ul.drop-menu.menu li {
 
 
 .hero-header h1 {
-    font-size: 4rem;
+    font-size: 3.5rem;
     line-height: 1.3;
-    margin:4rem;
+    margin:3rem;
     position:absolute;
     text-align: right;
     top: -20%;
@@ -472,17 +373,17 @@ li:hover ul.drop-menu.menu li {
 
 @keyframes heading {
     0% {top: -100px;}
-    100% {top: 50px;}
+    100% {top: 100px;}
 
 }
 
 .content {
     margin:5rem 4rem 4rem 4rem;
     line-height: 1.8;
+    position: absolute;
     text-align: justify;
-    top: 15%;
-    left: 35%;
-    right: 0%;
+    top: 20%;
+    left: 32%;
     transform: translate(0%, 0%);
     color: white;
     animation: content 3s ease-in;
@@ -506,7 +407,7 @@ li:hover ul.drop-menu.menu li {
     border: #fff 1px solid;
     opacity:0;
     top: 55%;
-    left: 35%;
+    left: 55%;
     right: 0%;
     transform: translate(0%, 0%);
     animation: btn 3s ease-in forwards;
@@ -536,6 +437,7 @@ li:hover ul.drop-menu.menu li {
 nav {
   text-align: center;
   margin: 0;
+
 }
   
     ul {
@@ -559,6 +461,7 @@ nav {
         font-size: 14px;
         color: #d5d5d5;
         cursor: pointer;
+
     }
 
     li:hover {
@@ -576,6 +479,7 @@ ul.drop-menu {
     display: grid;
     grid-auto-flow: row;
     animation-fill-mode: forwards;
+    
 
 }
   
@@ -609,31 +513,9 @@ li:hover ul.drop-menu li {
 }
 
 
-/***** MENU 1 *****/
-
-li:hover ul.drop-menu.menu-1 {
-    perspective: 1000px;
-}
-
-li:hover ul.drop-menu.menu-1 li {
-    opacity: 0;
-    animation-name: menu1;
-    animation-duration: 300ms;
-    animation-timing-function: ease-in-out;
-    animation-fill-mode: forwards;
-}
+/***** MENU *****/
 
 
-@keyframes menu1 {
-    0% {
-        opacity:0; 
-        transform:rotateY(-90deg), translateY(30px);
-    };
-    100% {
-        opacity:1; 
-        transform:rotateY(0deg), translateY(0px);
-    };
-}
 
 /*#endregion*/
 
