@@ -1,0 +1,590 @@
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@500;600&family=Playfair+Display:wght@700;500&display=swap');
+
+
+/*#region Default View*/
+html, main, body {
+        margin: 0;
+        padding: 0;
+        font-family: 'Open Sans', sans-serif;
+        background:#fff;
+        color:#000;
+        line-height:1.6;
+    }
+
+/*#region Header*/
+
+header {
+    background-image: linear-gradient(0deg, rgba(117,19,93,0.8) 0%, rgba(225,188,65,0) 30%, rgba(117,19,93,0.8) 100%),
+    url('../images/reina.jpg');
+    height: auto;
+    width: 100%;
+    transform: translate(0%, 0%);
+    background-position: left;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    position: relative;
+    animation-name: hero-image;
+    animation-duration:3s;
+    animation-fill-mode: forwards;
+    margin:0px;
+}
+
+@keyframes hero-image {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+
+header h1 {
+    font-size: 8vw;
+    text-shadow: #000 1px 2px;
+    line-height: 1.3;
+    text-align: center;
+    margin:1rem;
+    padding-top:1em;
+    padding-bottom: 0em;
+    transform: translate(0%, 0%);
+    color: white;
+    animation: heading;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+
+}
+
+@keyframes heading {
+    0% {top: -1000px;}
+    100% {top: 10px;}
+
+}
+
+.content {
+    font-size: 3vw;
+    line-height: 1.5;
+    text-shadow: #000 1px 2px;
+    margin:1em;
+    padding-bottom: 5em;
+    text-align:center;
+    transform: translate(0%, 0%);
+    color: white;
+    animation: content 3s ease-in;
+
+
+}
+
+@keyframes content {
+    0% {left: -1000px;}
+    100% {left: 0%;}
+
+}
+
+
+
+/*#endregion*/
+
+
+/*#region Navigation */
+
+nav {
+    text-align: center;
+    margin: 0;
+  }
+    
+      ul {
+          list-style: none;
+          padding: .2em;
+          margin: 0;
+          display: grid;
+          grid-auto-flow: column;
+          justify-content: space-around;
+          background: #d5d5d5;
+      }
+      
+      li {
+        width: 50px;
+        height: 50px;
+        display: grid;
+          position: relative;
+          align-content: center;
+          text-transform: uppercase;
+          color: #000;
+          text-decoration: none;
+          cursor: pointer;
+      }
+
+      a {
+
+          position: relative;
+          text-transform: uppercase;
+          font-size: 2.3vw;
+          display: grid;
+          align-items: space-around;
+          color: #000;
+          text-decoration: none;
+          cursor: pointer;
+      }
+
+
+  
+      li:hover {
+          background: #ca0668;
+          color:#fff;
+          border-radius: 5px;
+          border-radius: 5px;
+          z-index: 5;
+      }
+          
+  
+  
+  /*#endregion*/
+  
+
+/*#region Sections Formatting*/
+
+.purple {
+    background: rgba(117,19,93,.5);
+    margin:0 0 0 0;
+    padding: 1em 1em 4em 1em;
+
+}
+
+.purple h2 {
+    display:block;
+    padding: 0 2em 0 2em;
+    text-align: center;
+    font-size: 5vw;
+    border-bottom: #ecebeb 1px solid;
+    
+}
+
+.purple h3 {
+    display:block;
+    padding: 0em;
+    margin:0;
+    text-align: left;
+    font-size: 4vw;
+    color: rgba(117,19,93,1);
+}
+
+.purple p {
+    display:block;
+    margin:0;
+    padding:0 0 4rem 0;
+    text-align: left;
+    font-size: 3vw;
+    border-bottom: #000 10px;
+    color: #d5d5d5;
+}
+
+
+.white {
+    background: #fff;
+    margin:0;
+    padding-top: 3em;
+    padding-bottom: 3em;
+
+}
+
+.white h2 {
+    display:block;
+    padding: 0 2em 0 2em;
+    text-align: center;
+    font-size: 5vw;
+    border-bottom: #ecebeb 1px solid;
+    
+}
+
+.white h3 {
+    display:block;
+    padding: 0em;
+    margin:0;
+    text-align: left;
+    font-size: 4vw;
+    color: rgba(117,19,93,1);
+}
+
+.white p {
+    display:block;
+    margin:0;
+    padding:0 0 4rem 0;
+    text-align: left;
+    font-size: 3vw;
+    border-bottom: #000 10px;
+    color: #d5d5d5;
+}
+
+
+
+/*#endregion*/
+
+
+/*#region Shape Outside Formatting*/
+
+.polygon {
+    margin: 1em;
+}
+
+.polygon-img {
+    float:left;
+    clip-path: polygon(0 0, 70% 0, 100% 100%, 30% 100%);
+    shape-outside: polygon(0 0, 80% 0, 110% 110%, 30% 100%);
+    max-width: 50%;
+}
+
+.circle {
+    margin: 1em;
+}
+
+.circle-img {
+    float:left;
+    clip-path: circle(50% at 50% 50%);
+    shape-outside: circle(60.4% at 65% 50%);;
+    max-width: 50%;
+}
+
+/*#endregion*/
+
+/*#region Masking Formatting*/
+
+.masking {
+    float:left;
+    clip-path: polygon(0 0, 70% 0, 100% 100%, 30% 100%);
+    shape-outside: polygon(0 0, 80% 0, 110% 110%, 30% 100%);
+    max-width: 50%;
+    padding-bottom: 2em;
+}
+
+/*#endregion*/
+
+/*#region Blend Modes Formatting*/
+
+.blend {
+    float:left;
+    clip-path: polygon(0 0, 70% 0, 100% 100%, 30% 100%);
+    shape-outside: polygon(0 0, 80% 0, 110% 110%, 30% 100%);
+    max-width: 50%;
+    padding-bottom: 2em;
+}
+
+/*#endregion*/
+
+/*#region Filters Formatting*/
+
+.filters {
+    filter: contrast(130%);
+    width: 100vw;
+}
+
+/*#endregion*/
+
+
+/*#endregion*/
+
+
+@media only screen and (min-width : 700px) {
+
+
+
+    /*float: left;
+    //margin-bottom: 0.5em;
+    //clip-path: polygon(0% 0px, 50% 0px, 70% 7%, 73% 28%, 94.53% 67.73%, 90.13% 92.67%, 80.67% 100%, 0% 100%);
+    //shape-outside: polygon(0% 0px, 50% 0px, 73% 7%, 76% 28%, 99.53% 67.73%, 92.13% 92.67%, 82.67% 100%, 0% 100%);
+   //shape-margin: 20px;
+    //filter: contrast(110%);
+    //filter: blur(.5px);
+
+/*#region Hero*/
+
+.hero-image {
+    background-image: linear-gradient(to right, rgba(245, 246, 252, 0), rgba(117, 19, 93, 0.8)60%),
+    url('../images/reina.jpg');
+    height: 500px;
+    background-position: left;
+    background-size: cover;
+    transform: translate(0%, -3.5%);
+    position: relative;    
+    animation-name: hero-image;
+    animation-duration:3s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes hero-image {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+.hero-header {
+    height: 150px;
+
+}
+
+.hero-header h1 {
+    font-size: 2.6em;
+    line-height: 1.3;
+    position:relative;
+    text-align: right;
+    top: 0%;
+    right: 0%;
+    transform: translate(0%, 0%);
+    color: white;
+    animation: heading;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+
+}
+
+@keyframes heading {
+    0% {top: -100px;}
+    100% {top: 70px;}
+
+}
+
+.content {
+    font-size: 1.1rem;
+    margin:2rem;
+    padding-bottom:1rem;
+    text-align: justify;
+    position: absolute;
+    line-height: 1.8;
+    top: 25%;
+    left: 50%;
+    right: -1%;
+    transform: translate(0%, 0%);
+    color: white;
+    animation-name:content;
+    animation-duration:2s;
+    animation-fill-mode: forwards;
+
+
+}
+
+@keyframes content {
+    0% {left: -1000px;}
+    100% {left: 42%;}
+
+}
+
+.btn {
+    display: inline-block;
+    color:#fff;
+    text-decoration:none;
+    text-align: right;
+    margin-top: 1rem;
+    padding: 1rem 8.5rem;
+    border: #fff 1px solid;
+    opacity:1;
+    text-align: right;
+    position: absolute;
+    top: 76%;
+    right: 1%;
+    transform: translate(0%, 0%);
+    animation: btn 5s ease-in forwards;
+    cursor: pointer;
+
+}
+
+.btn:hover {
+    background-color: #ca0668;
+    color: #fff; 
+    box-shadow: rgba(117, 19, 93,.8) 3px 3px 3px 3px;
+  }
+
+
+@keyframes btn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+}
+
+/*#endregion*/
+}
+
+@media only screen and (min-width : 1000px) {
+ 
+
+/*#region Hero*/
+
+.hero-image {
+    background-image: linear-gradient(to right, rgba(245, 246, 252, 0), rgba(117, 19, 93, 0.8)60%),
+    url('../images/reina.jpg');
+    height: 500px;
+    background-position: center;
+    transform: translate(0%, 0%);
+    background-size: cover;
+    position: relative;    
+    animation-name: hero-image;
+    animation-duration:3s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes hero-image {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+
+.hero-header h1 {
+    font-size: 3.5rem;
+    line-height: 1.3;
+    margin:3rem;
+    position:absolute;
+    text-align: right;
+    top: -20%;
+    right: 0%;
+    transform: translate(0%, -50%);
+    color: white;
+    animation: heading;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+
+}
+
+@keyframes heading {
+    0% {top: -100px;}
+    100% {top: 100px;}
+
+}
+
+.content {
+    margin:5rem 4rem 4rem 4rem;
+    line-height: 1.8;
+    position: absolute;
+    text-align: justify;
+    top: 20%;
+    left: 32%;
+    transform: translate(0%, 0%);
+    color: white;
+    animation: content 3s ease-in;
+
+
+}
+
+@keyframes content {
+    0% {left: -1000px;}
+    100% {left: 0;}
+
+}
+
+.btn {
+    display: block;
+    color:#fff;
+    margin:4rem;
+    text-decoration:none;
+    text-align: center;
+    padding: 1rem 5rem;
+    border: #fff 1px solid;
+    opacity:0;
+    top: 55%;
+    left: 55%;
+    right: 0%;
+    transform: translate(0%, 0%);
+    animation: btn 3s ease-in forwards;
+    cursor: pointer;
+
+    transition-property: transform;
+    transition-duration: 1s;
+
+}
+
+.btn:hover {
+    background-color: #ca0668;
+    color: #fff; 
+    box-shadow: rgba(117, 19, 93,.8) 3px 3px 3px 3px;
+  }
+
+
+@keyframes btn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+}
+
+/*#endregion*/
+
+/*#region Navigation */
+
+nav {
+  text-align: center;
+  margin: 0;
+
+}
+  
+    ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: grid;
+        grid-auto-flow: column;
+        justify-content: space-around;
+        background: #d5d5d5;
+        border-radius: 5px;
+    }
+    
+    li {
+        float: left;
+        width: 150px;
+        height: 65px;
+        line-height: 65px;
+        position: relative;
+        text-transform: uppercase;
+        font-size: 14px;
+        color: #d5d5d5;
+        cursor: pointer;
+
+    }
+
+    li:hover {
+        background: #d5d5d5;
+        border-radius: 5px;
+    }
+        
+
+ul.drop-menu {
+    position: absolute;
+    top: 100%;
+    left: 0%;
+    width: 100%;
+    padding: 0;
+    display: grid;
+    grid-auto-flow: row;
+    animation-fill-mode: forwards;
+    
+
+}
+  
+    li {
+        background: #d5d5d5;
+        color: #000;
+        font-family: lato,sans-serif;
+    }
+    
+    li:hover{
+        background: #ca0668;
+        color: #fff;
+        animation-fill-mode: forwards;
+
+    }
+
+    li:last-child { 
+        border-radius: 0px 0px 5px 5px
+    }
+
+/***** Default Trigger*****/ 
+
+/*HIDE*/
+ul.drop-menu li {
+    display: none;
+}
+
+/*SHOW*/
+li:hover ul.drop-menu li {
+  display: block;
+}
+
+
+/***** MENU *****/
+
+
+
+/*#endregion*/
+
+
+}
