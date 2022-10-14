@@ -37,7 +37,6 @@
                     <p>I used clip path to crop the image in a parallelogram shape and used shape outside to add a boundary between the image and the text.</p>
                 </div>
               </div>
-              <br>
               <div class="circle">
                 <img class="circle-img" src="../lab4/images/reina-wine.png">
                 <div class="circle-text">
@@ -48,29 +47,77 @@
             </section>
             <section id="masking" class="white">
               <h2>Masking</h2>
-              <img class="masking" src="../lab4/images/reina-wine.png">
-              <div class="masking-text">
-                    <h3>Sleeping</h3>
-                    <p>I like to sleep a lot, especially after a bottle of wine.</p>
+              <div class="svg">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 250 250">
+                  <defs>
+                    <mask id="shape-mask">
+                      <circle id="outer" cx="125" cy="125" r="100" fill="white"/>
+                      <circle id="left" cx="0" cy="125" r="70" fill="black"/>
+                      <circle id="right" cx="250" cy="125" r="70" fill="black"/>
+                    </mask>
+                  </defs>
+                  <image width="100%" height="100%" href="../lab4/images/reina-wine.png" mask="url(#shape-mask)" />
+                </svg>
+                <div class="svg-text">
+                    <h3>SVG</h3>
+                    <p>I am able to overlay a SVG logo on an image to make it scaleable.</p>
+                </div>
+              </div>
+              <div class="gradient">
+                <img class="gradient-img" src="../lab4/images/reina-wine.png">
+                <div class="gradient-text">
+                    <h3>Gradient</h3>
+                    <p>Here, I used a radial gradient as the mask layer for this image.</p>
               </div>
             </section>
             <section id="blend" class="purple">
               <h2>Blend Modes</h2>
-              <img class="blend" src="../lab4/images/reina-wine.png">
-              <div class="blend-text">
-                    <h3>Sleeping</h3>
-                    <p>I like to sleep a lot, especially after a bottle of wine.</p>
-              </div>
+              <figure class="burn">
+                <img src="../lab4/images/reina-wine.png">
+                <div class="burn-text">
+                    <h3>Color Burn</h3>
+                    <p>The mix-blend mode property allows the image or content to blend with its background. Hover over the image to it with the color burn blend filter.</p>
+                </div>
+              </figure>
+              <figure class="saturation">
+                <img class="saturation-img" src="../lab4/images/reina-wine.png">
+                <div class="saturation-text">
+                    <h3>Saturation</h3>
+                    <p>Hover over the image to see it with the saturation blend filter.</p>
+                </div>
+              </figure>
             </section>
             <section id="filters" class="white">
               <h2>Filters</h2>
-              <img class="filters" src="../lab4/images/reina-wine.png">
-              <div class="filters-text">
-                    <h3>Contrast</h3>
-                    <p>In this picture, I added a filter that increased the contast of the image to be 130%</p>
-              </div>
-
+              <figure class="contrast">
+                <img src="../lab4/images/reina-wine.png">
+                <div class="contrast-text">
+                      <h3>Contrast</h3>
+                      <p>In this picture, I added a filter that increased the contast of the image to be 200%. Hover mouse over image to see the original photo.</p>
+                </div>
+              </figure>
+              <figure class="grey">
+                <img src="../lab4/images/reina-wine.png">
+                <div class="grey-text">
+                      <h3>Grayscale</h3>
+                      <p>I placed a grayscale filter over the image to remove the colors.</p>
+                </div>
+              </figure>
             </section>
+
+            <section class="purple">
+              <h2>Combination of All Types of Image Effects</h2>
+              <figure class="combo">
+                <img src="../lab4/images/reina-wine.png">
+                <div class="combo-text">
+                    <h3>Image Effects Used:</h3>
+                      <p>Shape Outside: Polygon</p>
+                      <p>Masking: Linear Gradient</p>
+                      <p>Blend: Screen</p>
+                      <p>Filter: Invert</p>
+
+                </div>
+              </figure>
         </main>
 
         <footer>
