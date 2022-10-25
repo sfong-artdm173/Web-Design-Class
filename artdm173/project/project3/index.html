@@ -2,24 +2,29 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8" />
-        <title>Shannon's Portfolio</title>
+        <title>Shannon Fong</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" type="text/css" href="">
         <!DOCTYPE html>
     </head>
     
- <!-- Top Navigation Menu -->
- <nav>
-  <ul>
-    <li><a href="#">Shannon Fong</a></li>
-    <li><a href="#">Home</a></li>
-    <li><a href="../project3/about/index.html">Who Am I?</a></li>
-    <li><a href="../project3/portfolio/">Portfolio</a></li>
-    <li><a href="#">Download CV</a></li>
-    <li><a href="#">Let's Talk</a></li>
+  <!-- Navigation Menu -->
+  <nav>
+    <h1><a href="../index.html">Shannon Fong</a></h1>
+    <div class="hamburger-menu">
+      <input id="menu__toggle" type="checkbox" />
+      <label class="menu__btn" for="menu__toggle">
+      </label>
+      <ul>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../about/index.html">Who Am I?</a></li>
+        <li><a href="../portfolio/index.html">Portfolio</a></li>
+        <li><a href="#">Download CV</a></li>
+        <li><a href="../contact/index.html">Let's Talk</a></li>
 
-  </ul>
-</nav>
+      </ul>
+    </div>
+  </nav>
 
   <header class="hero-image">
     <div class="hero">
@@ -58,8 +63,23 @@
            <h2>Let's Talk</h2>
            <p>You got a question? Send me a message!</p>
          </div>
-         <div class="contact-form">
-         </div>
+         <section class="contact">
+          <img class="contact-hero" src="">
+           <div class="contact-text">
+             <h1>Let's Talk</h1>
+             <p>You got a question? Send me a message!</p>
+           </div>
+            <form class="contact-form">
+                <label for="fname">First Name:</label><br>
+                <input type="text" id="fname" name="fname"><br>
+                <label for="lname">Last Name:</label><br>
+                <input type="text" id="lname" name="lname"><br>
+                <label for="email">Email:</label><br>
+                <input type="text" id="email" name="email"><br>
+                <label for="content">Message</label><br>
+                <textarea name="message" rows="10"></textarea>
+            </form>
+        </section>
       </section>
     </main>
   </body>
