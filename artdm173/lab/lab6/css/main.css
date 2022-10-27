@@ -7,6 +7,8 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+
 }
 
 html, main, body, header{
@@ -21,43 +23,19 @@ html, main, body, header{
 /*#region Header*/
 
 header {
-    background-color: rgba(210, 201, 204, 0.7);
+    background-color: rgba(210, 201, 204, .7);
     height: auto;
     width: 100%;
     margin:0;
     padding:0;
 }
 
-.bgvid {
-    position: fixed;
-    top: 0;
-    z-index: -1;
-    height: 100vh;
-    width: 100vw;
-    background-color: rgb(203, 151, 62);
-}
-
-video {
-    display: block;
-    /* play with imaging effects! */
-    mix-blend-mode: multiply;
-    filter: opacity(0.1);
-    filter: contrast(0.1);
-
-    /* make it fill and center */
-    object-fit: cover;
-    object-position: 50%;
-    width: 100vw;
-    height: 100vh;
-}
-
-
 header h1 {
     font-size: 7vw;
     text-shadow: rgba(52,62,112,.5) 1px 1px;
     text-align: center;
     padding-top:1em;
-    padding-bottom: 1em;
+    padding-bottom: .5em;
     color: rgba(52,62,112,1);
     
 }
@@ -79,11 +57,13 @@ nav {
           display: grid;
           grid-auto-flow: column;
           justify-content: space-around;
-          background: #d5d5d5;
+          background: rgba(210, 201, 204, .9);
+          box-shadow: #000;
+
       }
       
       li {
-        width: 50px;
+        width: 100px;
         height: 50px;
         display: grid;
         padding: 0 .5em;
@@ -110,7 +90,7 @@ nav {
 
   
       li:hover {
-          background: #ca0668;
+          background: rgba(179,158,90,1);
           color:#fff;
           padding: 0 .5em;
           border-radius: 5px;
@@ -130,69 +110,53 @@ nav {
 
 /*#region Sections Formatting*/
 
-.purple {
-    background: rgba(117,19,93,.5);
+.light {
+    background: rgba(219, 187, 172, .9);
     margin:0 0 0 0;
-    padding: 1em 1em 4em 1em;
+    padding: 1em 1em 1em 1em;
 
 }
 
-.purple h2 {
+.light h2 {
     display:block;
-    padding: 0 2em 0 2em;
+    padding: 1em;
     text-align: center;
-    font-size: 5vw;
-    border-bottom: #ecebeb 1px solid;
-    
+    font-size: 5vw;    
+    color: rgba(52,62,112,1)
 }
 
-.purple h3 {
-    display:block;
-    padding: 0em;
-    margin:0;
-    text-align: left;
-    font-size: 4vw;
-    color: rgba(117,19,93,1);
-}
 
-.purple p {
+.light p {
     display:block;
+    text-align: center;
+    font-family: lato, sans-serif;
     margin:0;
     padding:0 0 1rem 0;
-    text-align: left;
     font-size: 3vw;
     border-bottom: #000 10px;
-    color: #d5d5d5;
+    color: (65,44,41,1);
 }
 
 
-.white {
-    background: #fff;
-    margin:1em;
-    padding-top: 3em;
-    padding-bottom: 3em;
+.dark {
+    margin:0 0 0 0;
+    padding: 2em 1em 1em 1em;
+    background: rgba(139,80,62 ,.8);
+
 
 }
 
-.white h2 {
+.dark h2 {
     display:block;
-    padding: 0 2em 0 2em;
+    padding: 1em;
     text-align: center;
-    font-size: 5vw;
-    border-bottom: #ecebeb 1px solid;
+    font-size: 5vw;    
+    color: rgba(52,62,112,1)
     
 }
 
-.white h3 {
-    display:block;
-    padding: 0em;
-    margin:0;
-    text-align: left;
-    font-size: 4vw;
-    color: rgba(117,19,93,1);
-}
 
-.white p {
+.dark p {
     display:block;
     margin:0;
     padding:0 0 4rem 0;
