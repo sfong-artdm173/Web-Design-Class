@@ -10,21 +10,28 @@
     
   <!-- Navigation Menu -->
   <nav>
-    <h1><a href="../index.html">Shannon Fong</a></h1>
-    <div class="hamburger-menu">
-      <input id="menu__toggle" type="checkbox" />
-      <label class="menu__btn" for="menu__toggle">
-      </label>
-      <ul>
-        <li><a href="../index.html">Home</a></li>
-        <li><a href="../about/index.html">Who Am I?</a></li>
-        <li><a href="../portfolio/index.html">Portfolio</a></li>
-        <li><a href="#">Download CV</a></li>
-        <li><a href="../contact/index.html">Let's Talk</a></li>
-
-      </ul>
+    <div class="navbar">
+      <div class="container nav-container">
+          <input class="checkbox" type="checkbox" name="" id="" />
+          <div class="hamburger-lines">
+            <span class="line line1"></span>
+            <span class="line line2"></span>
+            <span class="line line3"></span>
+          </div>  
+        <div class="logo">
+          <h1><span class="shannon">Shannon</span><span class="fong"> Fong</span></h1>
+        </div>
+        <ul class="menu-items">
+          <li><a href="../project3/index.html">Home</a></li>
+          <li><a href="../project3/about/index.html">Who Am I?</a></li>
+          <li><a href="../project3/portfolio/index.html">Portfolio</a></li>
+          <li><a href="#">Download CV</a></li>
+          <li><a href="../project3/contact/index.html">Let's Talk</a></li>
+        </ul>
+      </div>
     </div>
   </nav>
+
 
   <header class="hero-image">
     <div class="hero">
@@ -63,65 +70,73 @@
            <h2>Let's Talk</h2>
            <p>You got a question? Send me a message!</p>
          </div>
-         <section class="contact">
-          <img class="contact-hero" src="">
-           <div class="contact-text">
-             <h1>Let's Talk</h1>
-             <p>You got a question? Send me a message!</p>
-           </div>
-            <form class="contact-form">
-                <label for="fname">First Name:</label><br>
-                <input type="text" id="fname" name="fname"><br>
-                <label for="lname">Last Name:</label><br>
-                <input type="text" id="lname" name="lname"><br>
-                <label for="email">Email:</label><br>
-                <input type="text" id="email" name="email"><br>
-                <label for="content">Message</label><br>
-                <textarea name="message" rows="10"></textarea>
+         <section class="contact" id="form-main">
+          <div class="contact-text">
+            <h1>Let's Talk</h1>
+            <p>You got a question? Send me a message!</p>
+          </div>
+          <div id="form-div">
+            <form class="form" id="form1">
+              
+              <p class="name">
+                <input name="name" type="text" class="validate[required,custom[onlyLetter],length[0,100]] feedback-input" placeholder="Name" id="name" />
+              </p>
+              
+              <p class="email">
+                <input name="email" type="text" class="validate[required,custom[email]] feedback-input" id="email" placeholder="Email" />
+              </p>
+              
+              <p class="text">
+                <textarea name="text" class="validate[required,length[6,300]] feedback-input" id="comment" placeholder="Comment"></textarea>
+              </p>
+              
+              
+              <div class="submit">
+                <input type="submit" value="SEND" id="button-blue"/>
+                <div class="ease"></div>
+              </div>
             </form>
+          </div>
         </section>
-      </section>
-    </main>
-  </body>
-        
-  <footer>
-    <section class="footer_main">
-      <h3>Shannon Fong</h3>
-      <section class="footer-social">
-        <a href="https://www.facebook.com/">
-          <img class="" alt="Facebook white icon" src=""></a>
-        <a href="https://www.instagram.com/">
-          <img class="" alt="Instagram white icon" src=""></a>
-      </section> 
-    </section>
-    <section>
-      <div>
-          <ul>
-            <li class="about-me">
-              <a href="/about">About Me</a>
-            </li>
-            <li class="experience">
-              <a href="#">Experience</a>
-            </li>
-            <li class="porfolio">
-              <a href="#">Portfolio</a>
-            </li>
+      </main>
+    </body>
+          
+    <footer>
+      <section class="footer-main">
+        <div class="column1">
+          <div class="flogo">
+            <h1><span class="shannon">Shannon</span><span class="fong"> Fong</span></h1>
+          </div>
+          <div class="social-icons">
+          <a href="https://www.facebook.com/">
+            <img class="fb-icon" alt="Facebook icon" src="../project3/images/fb-icon.png"></a>
+          <a href="https://www.instagram.com/">
+            <img class="ig-icon" alt="Instagram icon" src="../project3/images/ig-icon.png"></a>
+          <a href="https://www.linkedin.com/">
+            <img class="in-icon" alt="Linkedin icon" src="../project3/images/ln-icon.png"></a>
+          </div> 
+        </div>
+        <div class="column2">
+            <ul class="column2-items">
+              <li class="about-me">
+                <a href="../project3/about/index.html">About Me</a>
+              </li>
+              <li class="porfolio">
+                <a href="../project3/portfolio/index.html">Portfolio</a>
+              </li>
+            </ul>
+        </div>
+        <div class="column3">
+          <ul class="column3-items">
+            <li><a href="mailto:shannonlfong@gmail.com">shannonlfong@gmail.com</a></li>
+            <li><a href="/">Download Resume</a></li>
           </ul>
+        </div>
+      </section>
+                 
+      <div class="footer-copyright">
+        © 2022 Shannon Fong. All rights reserved.
       </div>
-      <div>
-        <ul>
-          <li><a href="mailto:shannonlfong@gmail.com">shannonlfong@gmail.com</a></li>
-          <li><a href="/">Download Resume</a></li>
-        </ul>
-      </div>
-      <div class="column-gap--2">
-        <a href="https://www.facebook.com/"><img class="" alt="Facebook white icon" src=""></a>
-        <a href="https://www.instagram.com/"><img class="" alt="Instagram white icon" src=""></a>
-        <a href="https://www.linkedin.com/"><img class="" alt="Linkedin white icon" src=""></a>
-      </div>
-                          
-      <div class="footer-copyright">© 2022 Shannon Fong. All rights reserved.</div>
-    </section>
-  </footer>
+    </footer>
     </body>
 </html>
