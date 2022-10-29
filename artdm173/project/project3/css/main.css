@@ -22,7 +22,7 @@ html{
 
 header {
     background-color: #fff;
-    background-image: url('https://picsum.photos/1000/300');
+    background-image: url('/artdm173/project/project3/images/shannon-hero.jpg');
     object-fit: cover;
     background-repeat: no-repeat;
     height: 300px;
